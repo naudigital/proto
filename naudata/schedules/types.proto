@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package ua.h3xcode.naudata.schedules;
+
+enum Week {
+  FIRST = 0;
+  SECOND = 1;
+}
+enum Day {
+  MONDAY = 0;
+  TUESDAY = 1;
+  WEDNESDAY = 2;
+  THURSDAY = 3;
+  FRIDAY = 4;
+  SATURDAY = 5;
+  SUNDAY = 6;
+}
+
+message Schedule {
+  repeated Class classes = 1;
+  Week week = 2;
+  Day day = 3;
+}
+
+message Class {
+  string name = 1;    // class name
+  string teacher = 2; // teacher name
+  string room = 3;    // room number
+  enum Type {
+    LECTURE = 0;
+    PRACTICE = 1;
+    LAB = 2;
+    ADDITIONAL = 3;
+    OTHER = 4;
+  }
+  Type type = 4;          // class type
+  uint32 start_shift = 5; // class start time in minutes from 00:00
+  uint32 end_shift = 6;   // class end time in minutes from 00:00
+  string meet_url = 7;    // url to meet (auth required)
+  string comment = 8;     // additional info (auth required)
+}

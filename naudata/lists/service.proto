@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package ua.h3xcode.naudata.lists;
+
+import "lists/requests.proto";
+
+service Lists {
+  rpc GetStudents(GetStudentsRequest) returns (GetStudentsResponse) {}
+}

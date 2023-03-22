@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package ua.h3xcode.naudata.schedules;
+
+import "schedules/requests.proto";
+
+service SchedulesService {
+  rpc GetSchedules(GetSchedulesRequest) returns (GetSchedulesResponse) {}
+  rpc GetScheduleByDay(GetScheduleByDayRequest)
+      returns (GetScheduleByDayResponse) {}
+  rpc SetSchedule(SetScheduleRequest) returns (SetScheduleResponse) {}
+}

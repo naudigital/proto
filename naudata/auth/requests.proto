@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package ua.h3xcode.naudata.auth;
+
+import "types.proto";
+import "auth/types.proto";
+
+message GetOAuthURLRequest { string app_id = 1; }
+
+message GetOAuthURLResponse {
+  string url = 1;
+  string state = 2;
+}
+
+message GetCredentialsRequest {
+  string app_id = 1;
+  string state = 2;
+}
+
+message GetCredentialsResponse { types.AuthCredentials credentials = 1; }
+
+message StreamCredentialsRequest {
+  string app_id = 1;
+  string state = 2;
+}
+
+message StreamCredentialsResponse { types.AuthCredentials credentials = 1; }
+
+message RenewCredentialsRequest { types.AuthCredentials credentials = 1; }
+
+message RenewCredentialsResponse { types.AuthCredentials new_credentials = 1; }
+
+message LogoutRequest { types.AuthCredentials credentials = 1; }
+
+message LogoutResponse {}

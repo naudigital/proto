@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package ua.h3xcode.naudata.name;
+
+import "name/requests.proto";
+
+service NameService {
+  rpc ListGroups(ListGroupsRequest) returns (ListGroupsResponse) {}
+  rpc ResolveGroup(ResolveGroupRequest) returns (ResolveGroupResponse) {}
+}

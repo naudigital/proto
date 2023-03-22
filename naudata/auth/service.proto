@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package ua.h3xcode.naudata.auth;
+
+import "auth/requests.proto";
+
+service AuthService {
+  rpc GetOAuthURL(GetOAuthURLRequest) returns (GetOAuthURLResponse) {}
+  rpc GetCredentials(GetCredentialsRequest) returns (GetCredentialsResponse) {}
+  rpc StreamCredentials(StreamCredentialsRequest)
+      returns (stream StreamCredentialsResponse) {}
+
+  rpc RenewCredentials(RenewCredentialsRequest)
+      returns (RenewCredentialsResponse) {}
+  rpc Logout(LogoutRequest) returns (LogoutResponse) {}
+}

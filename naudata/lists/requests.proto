@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package ua.h3xcode.naudata.lists;
+
+import "types.proto";
+import "lists/types.proto";
+
+message GetStudentsRequest {
+  types.AuthCredentials credentials = 1;
+  types.Group group = 2;
+}
+
+message GetStudentsResponse { repeated Student students = 1; }

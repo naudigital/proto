@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package ua.h3xcode.naudata.schedules;
+
+import "types.proto";
+import "schedules/types.proto";
+
+message GetSchedulesRequest {
+  /*
+   * Credentials here are optional, but if they are provided,
+   * the server will return extended information, including
+   * meet urls and comments.
+   */
+  types.AuthCredentials credentials = 1;
+  types.Group group = 2;
+}
+
+message GetSchedulesResponse { repeated Schedule schedules = 1; }
+
+message GetScheduleByDayRequest {
+  /*
+   * Credentials here are optional, but if they are provided,
+   * the server will return extended information, including
+   * meet urls and comments.
+   */
+  types.Group group = 2;
+  Week week = 3;
+  Day day = 4;
+}
+
+message GetScheduleByDayResponse { Schedule schedule = 1; }
+
+message SetScheduleRequest {
+  /*
+   * Credentials here are required to modify the schedule.
+   */
+  types.AuthCredentials credentials = 1;
+  types.Group group = 2;
+  Schedule schedule = 3;
+}
+
+message SetScheduleResponse {}
