@@ -18,7 +18,7 @@ To use the NAUData Auth Service, follow these steps:
 2. When the user clicks the "login" button, send a GetOAuthURL request to the auth service.
 3. The auth service will respond with Google's OAuth URL that the user should be redirected to for authentication.
 4. Redirect the user to the URL provided in the response.
-5. Once the user completes the authentication process on Google's website, they will be authorized.
+5. Once the user completes the authentication process on Google's site, they will be authorized.
 6. In your client application, set up a stream handler to receive the authentication credentials using the StreamCredentials method.
 7. The auth service will send a StreamCredentialsResponse message over the stream as soon as the user is authorized, containing the authentication credentials. The connection will be closed after the message is sent.
 8. Handle the authentication credentials returned by the StreamCredentials method in your client application. You can then use the authentication credentials to access the other services in NAUData that require authentication.
@@ -28,11 +28,8 @@ To use the NAUData Auth Service, follow these steps:
 #### GetCredentials polling method
 In addition to the server-side streaming approach described above, you can also use the GetCredentials method to poll the auth service for authentication credentials. Here's how this approach works:
 
-1. In your client application, provide a "login" button that initiates the authentication flow.
-2. When the user clicks the "login" button, send a GetOAuthURL request to the auth service.
-3. The auth service will respond with Google's OAuth URL that the user should be redirected to for authentication.
-4. Redirect the user to the URL provided in the response.
-5. Once the user completes the authentication process on Google's website, they will be authorized.
+_1 to 5 are the same as above._
+
 6. In your client application, poll the auth service at a regular interval (e.g. once per second) using the GetCredentials method to check if the user has been authorized.
 7. The auth service will respond with the authentication credentials if the user has been authorized, or an error message otherwise.
 8. Handle the authentication credentials or error message returned by the GetCredentials method in your client application. You can then use the authentication credentials to access the other services in your project that require authentication.
