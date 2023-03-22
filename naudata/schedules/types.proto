@@ -3,17 +3,19 @@ syntax = "proto3";
 package ua.h3xcode.naudata.schedules;
 
 enum Week {
-  FIRST = 0;
-  SECOND = 1;
+  WEEK_UNSPECIFIED = 0;
+  WEEK_FIRST = 1;
+  WEEK_SECOND = 2;
 }
 enum Day {
-  MONDAY = 0;
-  TUESDAY = 1;
-  WEDNESDAY = 2;
-  THURSDAY = 3;
-  FRIDAY = 4;
-  SATURDAY = 5;
-  SUNDAY = 6;
+  DAY_UNSPECIFIED = 0;
+  DAY_MONDAY = 1;
+  DAY_TUESDAY = 2;
+  DAY_WEDNESDAY = 3;
+  DAY_THURSDAY = 4;
+  DAY_FRIDAY = 5;
+  DAY_SATURDAY = 6;
+  DAY_SUNDAY = 7;
 }
 
 message Schedule {
@@ -27,11 +29,11 @@ message Class {
   string teacher = 2; // teacher name
   string room = 3;    // room number
   enum Type {
-    LECTURE = 0;
-    PRACTICE = 1;
-    LAB = 2;
-    ADDITIONAL = 3;
-    OTHER = 4;
+    TYPE_UNSPECIFIED = 0;
+    TYPE_LECTURE = 1;
+    TYPE_PRACTICE = 2;
+    TYPE_LAB = 3;
+    TYPE_ADDITIONAL = 4;
   }
   Type type = 4;          // class type
   uint32 start_shift = 5; // class start time in minutes from 00:00

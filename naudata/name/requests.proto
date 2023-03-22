@@ -2,13 +2,20 @@ syntax = "proto3";
 
 package ua.h3xcode.naudata.name;
 
-import "types.proto";
 import "name/types.proto";
+import "types.proto";
 
-message ResolveGroupRequest { string name = 1; }
+message ResolveGroupRequest {
+  string name = 1;
+}
 
-message ResolveGroupResponse { types.Group group = 1; }
+message ResolveGroupResponse {
+  types.Group group = 1;
+}
 
-message ListGroupsRequest {}
+message ListGroupsRequest {
+}
 
-message ListGroupsResponse { types.Group groups = 1; }
+message ListGroupsResponse {
+  types.Group groups = 1;
+}

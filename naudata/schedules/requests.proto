@@ -2,8 +2,8 @@ syntax = "proto3";
 
 package ua.h3xcode.naudata.schedules;
 
-import "types.proto";
 import "schedules/types.proto";
+import "types.proto";
 
 message GetSchedulesRequest {
   /*
@@ -15,7 +15,9 @@ message GetSchedulesRequest {
   types.Group group = 2;
 }
 
-message GetSchedulesResponse { repeated Schedule schedules = 1; }
+message GetSchedulesResponse {
+  repeated Schedule schedules = 1;
+}
 
 message GetScheduleByDayRequest {
   /*
@@ -28,7 +30,9 @@ message GetScheduleByDayRequest {
   Day day = 4;
 }
 
-message GetScheduleByDayResponse { Schedule schedule = 1; }
+message GetScheduleByDayResponse {
+  Schedule schedule = 1;
+}
 
 message SetScheduleRequest {
   /*
@@ -39,4 +43,5 @@ message SetScheduleRequest {
   Schedule schedule = 3;
 }
 
-message SetScheduleResponse {}
+message SetScheduleResponse {
+}
