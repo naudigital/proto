@@ -6,6 +6,7 @@ The auth service is defined in the `service.proto` file, which specifies the met
 
 - `GetOAuthURL`: Returns Google's OAuth URL that the user should be redirected to for authentication.
 - `GetCredentials`: Returns the authentication credentials if the user has authenticated with Google, or an error message otherwise.
+- `StreamCredentials`: Returns the authentication credentials when the user has authenticated with Google, or an error message otherwise. The connection will be closed after the message is sent.
 - `RenewCredentials`: Renews the authentication token if it has expired.
 - `Logout`: Logs the user out of the system.
 

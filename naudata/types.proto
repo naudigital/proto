@@ -9,6 +9,12 @@ message AuthCredentials {
 }
 
 message Group {
-  int64 id = 1;    // group id
-  string name = 2; // group name
+  int64 id = 1;        // group id
+  string name = 2;     // group name
+  Faculty faculty = 3; // faculty
+}
+
+message Faculty {
+  int64 id = 1;    // faculty id
+  string name = 2; // faculty name
 }

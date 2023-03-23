@@ -7,15 +7,15 @@ import "types.proto";
 
 message ResolveGroupRequest {
   string name = 1;
+  types.Faculty faculty = 2;
 }
 
-message ResolveGroupResponse {
-  types.Group group = 1;
-}
+message ResolveGroupResponse { types.Group group = 1; }
 
-message ListGroupsRequest {
-}
+message ListGroupsRequest { types.Faculty faculty = 1; }
 
-message ListGroupsResponse {
-  types.Group groups = 1;
-}
+message ListGroupsResponse { types.Group groups = 1; }
+
+message ResolveFacultyRequest { string name = 1; }
+
+message ResolveFacultyResponse { types.Faculty faculty = 1; }

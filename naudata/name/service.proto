@@ -6,5 +6,7 @@ import "name/requests.proto";
 
 service NameService {
   rpc ListGroups(ListGroupsRequest) returns (ListGroupsResponse) {}
+  rpc ListFaculties(ListFacultiesRequest) returns (ListFacultiesResponse) {}
+  rpc ResolveFaculty(ResolveFacultyRequest) returns (ResolveFacultyResponse) {}
   rpc ResolveGroup(ResolveGroupRequest) returns (ResolveGroupResponse) {}
 }
