@@ -1,4 +1,0 @@
-lint:
-  rules:
-    remove:
-      - INDENT
