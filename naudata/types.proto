@@ -16,5 +16,6 @@ message Group {
 
 message Faculty {
   int64 id = 1;    // faculty id
-  string name = 2; // faculty name
+  string code = 2; // faculty code
+  string full_name = 3; // faculty name
 }

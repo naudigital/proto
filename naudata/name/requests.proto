@@ -16,6 +16,6 @@ message ListGroupsRequest { types.Faculty faculty = 1; }
 
 message ListGroupsResponse { types.Group groups = 1; }
 
-message ResolveFacultyRequest { string name = 1; }
+message ResolveFacultyRequest { string code = 1; }
 
 message ResolveFacultyResponse { types.Faculty faculty = 1; }

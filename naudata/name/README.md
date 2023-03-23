@@ -27,7 +27,7 @@ rpc ResolveFaculty(ResolveFacultyRequest) returns (ResolveFacultyResponse) {}
 #### ResolveFacultyRequest
 The ResolveFacultyRequest message is used to request the faculty object associated with a given faculty name. It contains a single field:
 
-- name (string): The name of the faculty to resolve.
+- code (string): The code of the faculty to resolve.
 
 #### ResolveFacultyResponse
 The ResolveFacultyResponse message is used to return the faculty object associated with the given faculty name. It contains a single field:
