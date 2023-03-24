@@ -14,6 +14,13 @@ message ResolveGroupResponse {
   types.Group group = 1;
 }
 
+message ListFacultiesRequest {
+}
+
+message ListFacultiesResponse {
+  types.Faculty faculties = 1;
+}
+
 message ListGroupsRequest {
   types.Faculty faculty = 1;
 }
