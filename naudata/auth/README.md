@@ -1,12 +1,12 @@
 # NAUData Auth Service
-The NAUData Auth Service is responsible for authenticating users. It uses Google's OAuth to authenticate users and provide access to the rest of the services in the project.
+The NAUData Auth Service is responsible for authenticating users.
 
 ## Service Protobuf
 The auth service is defined in the `service.proto` file, which specifies the methods that are available on the service. Here is an overview of the methods defined in the auth/service.proto file:
 
-- `GetOAuthURL`: Returns Google's OAuth URL that the user should be redirected to for authentication.
-- `GetCredentials`: Returns the authentication credentials if the user has authenticated with Google, or an error message otherwise.
-- `StreamCredentials`: Returns the authentication credentials when the user has authenticated with Google, or an error message otherwise. The connection will be closed after the message is sent.
+- `GetAuthUrl`: Returns url that the user should be redirected to for authentication.
+- `GetCredentials`: Returns the authentication credentials if the user has authenticated, or an error message otherwise.
+- `StreamCredentials`: Returns the authentication credentials when the user has authenticated, or an error message otherwise. The connection will be closed after the message is sent.
 - `RenewCredentials`: Renews the authentication token if it has expired.
 - `Logout`: Logs the user out of the system.
 
@@ -16,10 +16,10 @@ To use the NAUData Auth Service, follow these steps:
 
 
 1. In your client application, provide a "login" button that initiates the authentication flow.
-2. When the user clicks the "login" button, send a GetOAuthURL request to the auth service.
-3. The auth service will respond with Google's OAuth URL that the user should be redirected to for authentication.
+2. When the user clicks the "login" button, send a GetAuthUrl request to the auth service.
+3. The auth service will respond with url that the user should be redirected to for authentication.
 4. Redirect the user to the URL provided in the response.
-5. Once the user completes the authentication process on Google's site, they will be authorized.
+5. Once the user completes the authentication process on auth page, they will be authorized.
 6. In your client application, set up a stream handler to receive the authentication credentials using the StreamCredentials method.
 7. The auth service will send a StreamCredentialsResponse message over the stream as soon as the user is authorized, containing the authentication credentials. The connection will be closed after the message is sent.
 8. Handle the authentication credentials returned by the StreamCredentials method in your client application. You can then use the authentication credentials to access the other services in NAUData that require authentication.

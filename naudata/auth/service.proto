@@ -5,7 +5,7 @@ package ua.h3xcode.naudata.auth;
 import "auth/requests.proto";
 
 service AuthService {
-  rpc GetOAuthURL(GetOAuthURLRequest) returns (GetOAuthURLResponse) {}
+  rpc GetAuthUrl(GetAuthUrlRequest) returns (GetAuthUrlResponse) {}
   rpc GetCredentials(GetCredentialsRequest) returns (GetCredentialsResponse) {}
   rpc StreamCredentials(StreamCredentialsRequest)
       returns (stream StreamCredentialsResponse) {}

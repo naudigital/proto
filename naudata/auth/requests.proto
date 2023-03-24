@@ -5,11 +5,11 @@ package ua.h3xcode.naudata.auth;
 import "auth/types.proto";
 import "types.proto";
 
-message GetOAuthURLRequest {
+message GetAuthUrlRequest {
   string app_id = 1;
 }
 
-message GetOAuthURLResponse {
+message GetAuthUrlResponse {
   string url = 1;
   string state = 2;
 }
