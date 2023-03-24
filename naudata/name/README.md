@@ -27,12 +27,12 @@ rpc ResolveFaculty(ResolveFacultyRequest) returns (ResolveFacultyResponse) {}
 #### ResolveFacultyRequest
 The ResolveFacultyRequest message is used to request the faculty object associated with a given faculty name. It contains a single field:
 
-- code (string): The code of the faculty to resolve.
+- `code` (string): The code of the faculty to resolve.
 
 #### ResolveFacultyResponse
 The ResolveFacultyResponse message is used to return the faculty object associated with the given faculty name. It contains a single field:
 
-- faculty (types.Faculty): The faculty object associated with the given faculty name. If no faculty is found with the given name, an error is returned.
+- `faculty` (types.Faculty): The faculty object associated with the given faculty name. If no faculty is found with the given name, an error is returned.
 
 
 ### ResolveGroup
@@ -43,16 +43,16 @@ rpc ResolveGroup(ResolveGroupRequest) returns (ResolveGroupResponse) {}
 ```
 
 #### ResolveGroupRequest
-The ResolveGroupRequest message is used to request the group object associated with a given group name. It contains a two fields:
+The ResolveGroupRequest message is used to request the group object associated with a given group name. It contains a three fields:
 
-- credentials (types.AuthCredentials): The authentication credentials got from the Auth service.
-- name (string): The name of the group to resolve.
-- faculty (types.Faculty): The faculty object which the group belongs to.
+- `credentials` (types.AuthCredentials): The authentication credentials got from the Auth service.
+- `name` (string): The name of the group to resolve.
+- `faculty` (types.Faculty): The faculty object which the group belongs to.
 
 #### ResolveGroupResponse
 The ResolveGroupResponse message is used to return the group object associated with the given group name. It contains a single field:
 
-- group (types.Group): The group object associated with the given group name. If no group is found with the given name, an error is returned.
+- `group` (types.Group): The group object associated with the given group name. If no group is found with the given name, an error is returned.
 
 ## Usage
 To use the Name Service, follow these steps:

@@ -18,8 +18,8 @@ message GetSchedulesRequest {
   types.Group group = 2;
 }
 ```
-- credentials (optional): Credentials for authentication.
-- group: The group to retrieve the schedules for.
+- `credentials` (optional): Credentials for authentication.
+- `group`: The group to retrieve the schedules for.
 
 Response
 ```protobuf
@@ -28,7 +28,7 @@ message GetSchedulesResponse {
 }
 ```
 
-- schedules: A list of schedules for the given group.
+- `schedules`: A list of schedules for the given group.
 
 ### GetScheduleByDay
 ```protobuf
@@ -46,9 +46,9 @@ message GetScheduleByDayRequest {
 }
 ```
 
-- group: The group to retrieve the schedule for.
-- week: The week for which to retrieve the schedule.
-- day: The day for which to retrieve the schedule.
+- `group`: The group to retrieve the schedule for.
+- `week`: The week for which to retrieve the schedule.
+- `day`: The day for which to retrieve the schedule.
 
 Response
 ```protobuf
@@ -75,9 +75,9 @@ message SetScheduleRequest {
 }
 ```
 
-- credentials: Credentials for authentication.
-- group: The group to set the schedule for.
-- schedule: The new schedule for the given group.
+- `credentials`: Credentials for authentication.
+- `group`: The group to set the schedule for.
+- `schedule`: The new schedule for the given group.
 
 Response
 ```protobuf

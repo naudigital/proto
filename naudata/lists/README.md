@@ -11,8 +11,8 @@ To use the NAUData Lists service, follow these steps:
 ### GetStudents request
 The GetStudents request is used to retrieve a list of students for a specific group. It has the following fields:
 
-- credentials (required): An AuthCredentials object containing the authentication credentials necessary to access the Lists service.
-- group (required): A Group object containing the information for the group whose student list you want to retrieve.
+- `credentials` (required): An AuthCredentials object containing the authentication credentials necessary to access the Lists service.
+- `group` (required): A Group object containing the information for the group whose student list you want to retrieve.
 
 ### GetStudents response
 The GetStudents response is returned by the Lists service in response to a GetStudents request. It contains a list of Student objects.
@@ -20,6 +20,6 @@ The GetStudents response is returned by the Lists service in response to a GetSt
 ## Types
 The Lists service also defines a Student object, which has the following fields:
 
-- id (required): The unique identifier for the student.
-- name (required): The full name of the student.
-- short_name (optional): An short name for the student, if available.
+- `id` (required): The unique identifier for the student.
+- `name` (required): The full name of the student.
+- `short_name` (optional): An short name for the student, if available.
