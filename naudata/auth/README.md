@@ -4,7 +4,7 @@ The NAUData Auth Service is responsible for authenticating users.
 ## Service Protobuf
 The auth service is defined in the `service.proto` file, which specifies the methods that are available on the service. Here is an overview of the methods defined in the auth/service.proto file:
 
-- `GetAuthUrl`: Returns url that the user should be redirected to for authentication.
+- `GetAuthUrl`: Returns URL that the user should be redirected to for authentication.
 - `GetCredentials`: Returns the authentication credentials if the user has authenticated, or an error message otherwise.
 - `StreamCredentials`: Returns the authentication credentials when the user has authenticated, or an error message otherwise. The connection will be closed after the message is sent.
 - `RenewCredentials`: Renews the authentication token if it has expired.
@@ -17,7 +17,7 @@ To use the NAUData Auth Service, follow these steps:
 
 1. In your client application, provide a "login" button that initiates the authentication flow.
 2. When the user clicks the "login" button, send a GetAuthUrl request to the auth service.
-3. The auth service will respond with url that the user should be redirected to for authentication.
+3. The auth service will respond with URL that the user should be redirected to for authentication.
 4. Redirect the user to the URL provided in the response.
 5. Once the user completes the authentication process on auth page, they will be authorized.
 6. In your client application, set up a stream handler to receive the authentication credentials using the StreamCredentials method.
