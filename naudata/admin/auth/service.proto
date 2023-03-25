@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package ua.h3xcode.naudata.admin.auth;
+
+import "admin/auth/requests.proto";
+
+service AuthAdminService {
+  rpc GetAdminCredentials(GetAdminCredentialsRequest)
+      returns (GetAdminCredentialsResponse) {}
+}

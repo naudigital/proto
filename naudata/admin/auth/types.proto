@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+package ua.h3xcode.naudata.admin.auth;
+
+/**
+ * Place holder for future use.
+ */

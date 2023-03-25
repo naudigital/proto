@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package ua.h3xcode.naudata.admin.auth;
+
+import "admin/auth/types.proto";
+import "google/protobuf/duration.proto";
+import "types.proto";
+
+message GetAdminCredentialsRequest {
+  google.protobuf.Duration ttl = 1;
+}
+
+message GetAdminCredentialsResponse {
+  types.AuthCredentials credentials = 1;
+}

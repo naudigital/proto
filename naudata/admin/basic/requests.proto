@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package ua.h3xcode.naudata.admin.basic;
+
+import "admin/basic/types.proto";
+import "types.proto";
+
+message AddFacultyRequest {
+  string code = 1;
+  string full_name = 2;
+}
+
+message AddFacultyResponse {
+  types.Faculty faculty = 1;
+}
+
+message AddGroupRequest {
+  string name = 1;
+  types.Faculty faculty = 2;
+}
+
+message AddGroupResponse {
+  types.Group group = 1;
+}

@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package ua.h3xcode.naudata.admin.basic;
+
+import "admin/basic/requests.proto";
+
+service BasicAdminService {
+  rpc AddFaculty(AddFacultyRequest) returns (AddFacultyResponse) {}
+  rpc AddGroup(AddGroupRequest) returns (AddGroupResponse) {}
+}
