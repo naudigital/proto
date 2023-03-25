@@ -1,0 +1,10 @@
+---
+repos:
+  - repo: https://github.com/rhysd/actionlint
+    rev: v1.6.23
+    hooks:
+      - id: actionlint
+  - repo: https://github.com/yoheimuta/protolint
+    rev: v0.43.1
+    hooks:
+      - id: protolint

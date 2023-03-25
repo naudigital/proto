@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "proto"
+version = "0.1.0"
+description = ""
+authors = ["Stanislav <h3xcode@envs.net>"]
+license = "Proprietary"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pre-commit = "^3.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
