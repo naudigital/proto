@@ -2,8 +2,10 @@ syntax = "proto3";
 
 package ua.h3xcode.naudata.lists;
 
+import "types.proto";
+
 message Student {
-  int64 id = 1;
+  types.UUID id = 1;
   string name = 2;
   string short_name = 3;
 }

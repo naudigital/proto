@@ -2,6 +2,10 @@ syntax = "proto3";
 
 package ua.h3xcode.naudata.types;
 
+message UUID {
+  string uuid = 1;
+}
+
 message AuthCredentials {
   string app_id = 1;
   string token = 2;
@@ -9,13 +13,13 @@ message AuthCredentials {
 }
 
 message Group {
-  int64 id = 1;        // group id
+  UUID id = 1;         // group id
   string name = 2;     // group name
   Faculty faculty = 3; // faculty
 }
 
 message Faculty {
-  int64 id = 1;    // faculty id
-  string code = 2; // faculty code
+  UUID id = 1;          // faculty id
+  string code = 2;      // faculty code
   string full_name = 3; // faculty name
 }
