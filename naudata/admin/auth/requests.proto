@@ -13,3 +13,20 @@ message GetAdminCredentialsRequest {
 message GetAdminCredentialsResponse {
   types.AuthCredentials credentials = 1;
 }
+
+message CreateClientAppRequest {
+  string name = 1;
+  string description = 2;
+  string additional_info = 3;
+}
+
+message CreateClientAppResponse {
+  types.UUID app_id = 1;
+}
+
+message RevokeClientAppRequest {
+  types.UUID app_id = 1;
+}
+
+message RevokeClientAppResponse {
+}

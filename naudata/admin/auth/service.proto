@@ -7,4 +7,10 @@ import "admin/auth/requests.proto";
 service AuthAdminService {
   rpc GetAdminCredentials(GetAdminCredentialsRequest)
       returns (GetAdminCredentialsResponse) {}
+
+  rpc CreateClientApp(CreateClientAppRequest)
+      returns (CreateClientAppResponse) {}
+
+  rpc RevokeClientApp(RevokeClientAppRequest)
+      returns (RevokeClientAppResponse) {}
 }
