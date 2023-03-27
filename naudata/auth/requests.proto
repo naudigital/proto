@@ -6,7 +6,7 @@ import "auth/types.proto";
 import "types.proto";
 
 message GetAuthUrlRequest {
-  string app_id = 1;
+  types.UUID app_id = 1;
 }
 
 message GetAuthUrlResponse {
@@ -15,7 +15,7 @@ message GetAuthUrlResponse {
 }
 
 message GetCredentialsRequest {
-  string app_id = 1;
+  types.UUID app_id = 1;
   string state = 2;
 }
 
@@ -24,7 +24,7 @@ message GetCredentialsResponse {
 }
 
 message StreamCredentialsRequest {
-  string app_id = 1;
+  types.UUID app_id = 1;
   string state = 2;
 }
 

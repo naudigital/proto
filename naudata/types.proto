@@ -7,7 +7,7 @@ message UUID {
 }
 
 message AuthCredentials {
-  string app_id = 1;
+  UUID app_id = 1;
   string token = 2;
   string auth_type = 3;
 }
