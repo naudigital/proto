@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package ua.h3xcode.naudata.admin.basic;
+package com.naudigital.naudata.admin.basic;
 
 import "admin/basic/types.proto";
 import "types.proto";

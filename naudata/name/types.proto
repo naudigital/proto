@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package ua.h3xcode.naudata.name;
+package com.naudigital.naudata.name;
 
 /**
  * Place holder for future use.

@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package ua.h3xcode.naudata.auth;
+package com.naudigital.naudata.auth;
 
 import "auth/requests.proto";
 

@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package ua.h3xcode.naudata.schedules;
+package com.naudigital.naudata.schedules;
 
 enum Week {
   WEEK_UNSPECIFIED = 0;

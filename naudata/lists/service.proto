@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package ua.h3xcode.naudata.lists;
+package com.naudigital.naudata.lists;
 
 import "lists/requests.proto";
 

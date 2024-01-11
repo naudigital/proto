@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package ua.h3xcode.naudata.admin.auth;
+package com.naudigital.naudata.admin.auth;
 
 import "admin/auth/types.proto";
 import "google/protobuf/duration.proto";
